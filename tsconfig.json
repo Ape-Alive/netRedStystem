@@ -8,6 +8,8 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,    
+    "noImplicitAny":false,
     "baseUrl": "./",
     "strict": true,
     "paths": {
