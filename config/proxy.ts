@@ -1,13 +1,13 @@
 export default {
   dev: {
-    '/api/': {
+    '/api': {
       target: 'http://localhost:7000',
       changeOrigin: true,
       pathRewrite: { '^/api': '' },
     },
   },
   test: {
-    '/api/': {
+    '/api': {
       target: '',
       changeOrigin: true,
       pathRewrite: { '^/api': '' },

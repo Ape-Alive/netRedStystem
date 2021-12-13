@@ -7,6 +7,12 @@ export default defineConfig({
   define: {
     'process.env.react_env': 'dev',
   },
-
-  proxy: proxy['dev'],
+  // proxy: {
+  //   '/api': {
+  //     'target': 'http://localhost:7000/',
+  //     'changeOrigin': true,
+  //     'pathRewrite': { '^/api' : '' },
+  //   },
+  // },
+  // proxy: proxy['dev'],
 });

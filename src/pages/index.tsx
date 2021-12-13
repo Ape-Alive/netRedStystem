@@ -7,15 +7,28 @@ export default function IndexPage() {
     console.log(process.env.react_env);
 
     let jsondata = getJson(null);
-    console.log(jsondata);
+    jsondata.then((res) => {
+      console.log(res);
+    });
+    // console.log(jsondata);
+    //   let xhr=new XMLHttpRequest();
+    //   xhr.onreadystatechange = function(){
+    //     if(xhr.readyState == 4){
+    //         if(xhr.status == 200){
+    //            console.log("成功");
 
-    // jsondata.then((result)=>{
-    //   console.log("result", result);
-    // });
+    //         }
+    //     }
+    // }
+    //   xhr.open('get','http://localhost:8000/todolist/getinfo')
+    //   xhr.send(null)
+    //   // jsondata.then((result)=>{
+    //   //   console.log("result", result);
+    //   // });
   };
   useState();
   useEffect(() => {
-    en();
+    // en();
     return () => {};
   }, []);
   return (
@@ -23,7 +36,8 @@ export default function IndexPage() {
       <h1 className={styles.title}>Page index</h1>
       <Button
         onClick={() => {
-          getJson(null);
+          // getJson(null)
+          en();
         }}
       >
         Success

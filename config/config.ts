@@ -2,13 +2,13 @@ import { defineConfig } from 'umi';
 import routes from './routes';
 import proxy from './proxy';
 import defaultSettings from './defaultSettings';
-const NODE_ENV = process.env.react_env;
+const NODE_ENV = process.env.react_env + '';
 
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  proxy: proxy[NODE_ENV || 'dev'],
+  proxy: proxy[NODE_ENV],
   routes,
   hash: true,
   manifest: {
