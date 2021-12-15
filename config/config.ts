@@ -8,6 +8,11 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  dva: {
+    immer: true,
+    hmr: false,
+  },
+
   proxy: proxy[NODE_ENV],
   routes,
   hash: true,
@@ -21,9 +26,6 @@ export default defineConfig({
   publicPath: '/',
   //打包文件后文件名会加hash值
 
-  dva: {
-    hmr: true,
-  },
   history: {
     type: 'browser',
   },

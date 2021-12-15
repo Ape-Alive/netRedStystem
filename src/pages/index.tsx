@@ -2,6 +2,7 @@ import styles from './index.less';
 import React, { useState, useEffect } from 'react';
 import { getJson } from '@/services/todolist';
 import { Button } from 'antd-mobile';
+import { unstable_Toast as Toast } from '@ant-design/mobile';
 export default function IndexPage() {
   const en = () => {
     console.log(process.env.react_env);
@@ -36,12 +37,9 @@ export default function IndexPage() {
       <h1 className={styles.title}>Page index</h1>
       <Button
         onClick={() => {
-          // getJson(null)
           en();
         }}
-      >
-        Success
-      </Button>
+      ></Button>
       {/* <Button color='success'></Button> */}
     </div>
   );
